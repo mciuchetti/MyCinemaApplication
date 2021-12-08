@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyCinemaApplication</string>
+    <string name="elenco">MY MOVIES</string>
 </resources>

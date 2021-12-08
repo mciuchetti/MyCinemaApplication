@@ -3,6 +3,7 @@ package it.pg.volta.mycinemaapplication;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private Button buttonImg;
     private Button buttonJson;
+    private Button buttonList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         this.textView = (TextView) this.findViewById(R.id.textView);
         this.buttonImg = (Button) this.findViewById(R.id.button_img);
         this.buttonJson = (Button) this.findViewById(R.id.button_json);
+        this.buttonList = (Button) this.findViewById(R.id.button_list);
 
         this.buttonImg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 
     private boolean checkInternetConnection() {
         // Get Connectivity Manager
@@ -99,5 +101,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Execute task (Pass jsonUrl).
         task.execute(jsonUrl);
+    }
+
+    public void showMovieList(View view) {
+        Intent i = new Intent(getApplicationContext(), MovieActivity.class);
+        startActivity(i);
     }
 }

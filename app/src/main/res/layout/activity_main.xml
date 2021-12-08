@@ -62,6 +62,14 @@
             android:layout_height="wrap_content"
             android:layout_weight="0"
             android:text="Download JSON" />
+
+        <Button
+            android:id="@+id/button_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:onClick="showMovieList"
+            android:text="Movie list" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
